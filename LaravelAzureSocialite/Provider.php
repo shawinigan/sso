@@ -6,7 +6,7 @@ use GuzzleHttp\RequestOptions;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
 
-class AzureSocialiteProvider extends AbstractProvider
+class Provider extends AbstractProvider
 {
     /**
      * Unique Provider Identifier.
