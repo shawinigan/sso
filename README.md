@@ -1,11 +1,16 @@
 ## Installation
 1. Run `composer require shawinigan/sso` to include this in your project.
-2. Run `php artisan vendor:publish --provider="shawinigan/sso"`.
+2. Run `php artisan vendor:publish --provider="Shawinigan\Sso\LaravelAzureProvisioning\AzureProvisioningProvider"`.
+3. Run `php artisan vendor:publish --provider="Shawinigan\Sso\LaravelAzureSocialite\AzureSocialiteProvider"`.
+4. Run `npm install`
+5. Run `npm run build`
+6. Run `npm run dev`
+7. Run `php artisan migrate`
 
 ## Configuration (Laravel)
 1. Open `config/azureprovisioning.php` to adjust the packages configuration
 
-    If the file doesn't exist, ensure you have ran `php artisan vendor:publish --provider="shawinigan/sso"`.
+    If the file doesn't exist, ensure you have ran `php artisan vendor:publish --provider="Shawinigan\Sso\LaravelAzureProvisioning\AzureProvisioningProvider"`.
 
 2. Modify the configuration as required. All fields are commented and should provide enough description for how they change the way this package works.
 

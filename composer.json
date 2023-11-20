@@ -27,7 +27,7 @@
         "laravel": {
             "providers": [
                 "Shawinigan\\Sso\\LaravelAzureProvisioning\\AzureProvisioningProvider",
-                "Shawinigan\\Sso\\LaravelAzureSocialite\\AzureSocialiteProvider"
+                "Shawinigan\\Sso\\LaravelAzureSocialite\\AzureSocialiteServiceProvider"
             ]
         }
     }

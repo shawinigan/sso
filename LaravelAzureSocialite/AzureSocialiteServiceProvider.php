@@ -5,7 +5,7 @@ namespace Shawinigan\Sso\LaravelAzureSocialite;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class AzureSocialiteProvider extends ServiceProvider
+class AzureSocialiteServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
