@@ -29,7 +29,7 @@
                         </a>
                     </div>
                     <div class="flex items-center dark:text-white">
-                        {{ __('shawinigan_sso::Unified connection portal') }}
+                        {{ __('shawinigan_sso::welcome.title') }}
                     </div>
                     <div class="flex items-center">
                         <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -43,19 +43,19 @@
 
         <div class="flex dark:text-white w-full text-center items-center mt-14 flex-col">
             <p>
-                {{ __('shawinigan_sso::Top Message') }}
+                {{ __('shawinigan_sso::welcome.top_message') }}
             </p>
 
             <h3 class="text-3xl font-bold mt-4">
-                {{ __('shawinigan_sso::Welcome') }}, {{$user->name}}
+                {{ __('shawinigan_sso::welcome.welcome') }}, {{$user->name}}
             </h3>
 
             <a class="flex w-full text-center items-center flex-col" href="{{route(config('shawi-sso.dashboardRouteName'))}}">
                 <p class="mt-10">
-                    {{ __('shawinigan_sso::Continue as') }} :
+                    {{ __('shawinigan_sso::welcome.continue_as') }} :
                 </p>
                 <div class="mt-2">
-                    <img class="w-16 h-16 rounded-full" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" alt="user photo">
+                    <img class="w-16 h-16 rounded-full" src="{{$user->getAdAvatar()}}" alt="user photo">
                 </div>
                 <p>{{$user->name}}</p>
                 <p class="font-bold">{{$user->email}}</p>
@@ -67,7 +67,7 @@
                 <a class="flex font-bold" href="{{route('logout')}}"
                         onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                    {{ __('shawinigan_sso::Change profile') }}
+                    {{ __('shawinigan_sso::welcome.change_profile') }}
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"/>
                     </svg>
@@ -75,7 +75,7 @@
             </form>
 
             <a class="flex underline text-gray-800 dark:text-gray-500 mt-10" href="">
-                {{ __('shawinigan_sso::I am not able to connect') }}
+                {{ __('shawinigan_sso::welcome.unable_to_connect') }}
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
                 </svg>
@@ -89,9 +89,9 @@
 <footer class="fixed bottom-0 left-0 z-20 w-full bg-white rounded-lg shadow dark:bg-gray-900 m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © {{ __('shawinigan_sso::All rights reserved') }} - 
+            © {{ __('shawinigan_sso::welcome.all_rights_reserved') }} - 
             <a href="https://shawinigan.ca/" class="hover:underline">Ville de Shawinigan</a>. - 
-            <a href="config('shawi-sso.privacyPolicyLink')">{{ __('shawinigan_sso::Privacy policy') }}</a>
+            <a href="{{config('shawi-sso.privacyPolicyLink')}}">{{ __('shawinigan_sso::welcome.privacy_policy') }}</a>
         </span>
     </div>
 </footer>
