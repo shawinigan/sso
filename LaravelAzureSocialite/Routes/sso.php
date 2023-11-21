@@ -42,15 +42,9 @@ Route::middleware(['web'])->group(function () {
     });
 
 
-    Route::get('/', function () {
+    Route::get('/connexion', function () {
         return view('shawinigan_sso::welcome', ['user' => Auth::user()]);
-    })->middleware('auth')->name('home');
-
-    Route::get('/applications', function () {
-        return view('shawinigan_sso::dashboard', ['user' => Auth::user()]);
-    })->middleware('auth')->name('dashboard');
-
-
+    })->middleware('auth')->name('sso_connexion');
 });
 
 

@@ -13,7 +13,7 @@
         <img src="{{$user->getAdAvatar()}}"/>
         {{$user->email}}
 
-        <a href="{{route('dashboard')}}"> Continuer en tant que {{$user->name}}</a>
+        <a href="{{route(config('shawi-sso.dashboardRouteName'))}}"> Continuer en tant que {{$user->name}}</a>
 
         <form method="POST" action="{{ route('logout') }}">
             @csrf

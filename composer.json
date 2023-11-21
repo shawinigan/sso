@@ -1,6 +1,7 @@
 {
     "name": "shawinigan/sso",
     "description": "Shawinigan SSO utilities",
+    "license": "MIT",
     "authors": [
         {
             "name": "Patrice Guillemette",

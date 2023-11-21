@@ -16,6 +16,8 @@
 
 3. If you do not wish to provision Groups you can entirely remove (or comment) the `Groups` key.
 
+4. Open `config/shawi-sso.php` to adjust the packages configuration
+
 4. ### Add configuration to `config/services.php`
 
 ```php
