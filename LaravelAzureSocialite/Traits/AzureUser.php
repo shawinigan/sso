@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Traits;
+namespace Shawinigan\Sso\LaravelAzureSocialite\Traits;
 
 use App\Models\SystemLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
-trait ModelLog
+trait AzureUser
 {
     protected $default_avatar = 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
 
-    protected function getAdAvatar(){
+    function getAdAvatar(){
         if($this->avatar !== null)
         {
             return stream_get_contents($this->avatar);
