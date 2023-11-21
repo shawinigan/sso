@@ -43,6 +43,38 @@ protected $listen = [
 ];
 ```
 
+6. ###Add the AzureUser trait to the user model
+```php
+use Shawinigan\Sso\LaravelAzureSocialite\Traits\AzureUser;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, AzureUser;
+7. ### Add fillable and hidden to user model
+
+```php
+protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'azure_auth_id',
+        'azure_access_token',
+        'azure_refresh_token',
+        'username',
+        'avatar',
+        'azure_expires_timestamp'
+    ];
+
+protected $hidden = [
+        'password',
+        'remember_token',
+        'azure_auth_id',
+        'azure_access_token',
+        'azure_refresh_token',
+        'azure_expires_timestamp'
+    ];
+```
+
 ## Configuration (Azure)
 1. Login to Azure Active Directory
 2. Select **All services** > **Enterprise applications**

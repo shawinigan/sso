@@ -74,7 +74,7 @@
             </a>
             </form>
 
-            <a class="flex underline text-gray-800 dark:text-gray-500 mt-10" href="">
+            <a class="flex underline text-gray-800 dark:text-gray-500 mt-10" href="{{config('shawi-sso.unableToConnectLink')}}">
                 {{ __('shawinigan_sso::welcome.unable_to_connect') }}
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
