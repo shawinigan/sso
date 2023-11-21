@@ -34,7 +34,7 @@ Route::middleware(['web'])->group(function () {
 
         Auth::login($user);
 
-        return redirect('/');
+        return redirect('/connexion');
     });
 
     Route::get('/auth/refresh', function () {
