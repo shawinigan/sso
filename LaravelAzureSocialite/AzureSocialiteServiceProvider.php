@@ -35,7 +35,7 @@ class AzureSocialiteServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/lang' => $this->app->langPath('vendor/shawinigan_sso'),
             __DIR__.'/resources/views' => resource_path('views/vendor/shawinigan_sso'),
-            [__DIR__.'/Config/shawi-sso.php' => config_path('shawi-sso.php')], 'shawi-sso'
+            [__DIR__.'/Config/shawi-sso.php' => config_path('shawi-sso.php')],
         ]);
     }
 }
